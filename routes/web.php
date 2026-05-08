@@ -33,11 +33,6 @@ Route::get('/admin/delete/{id}', [AdminController::class, 'destroy']);
 
 //pasien//
 Route::get('/pasien', [PasienController::class, 'index']);
-Route::get('/pasien/create', [PasienController::class, 'create']);
-Route::post('/pasien/store', [PasienController::class, 'store']);
-Route::get('/pasien/edit/{id}', [PasienController::class, 'edit']);
-Route::post('/pasien/update/{id}', [PasienController::class, 'update']);
-Route::get('/pasien/delete/{id}', [PasienController::class, 'destroy']);
 
 //dokter
 Route::get('/dokter', [DokterController::class, 'index']);

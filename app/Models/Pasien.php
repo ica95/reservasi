@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class pasien extends Model
 {
     use HasFactory;
+
+    protected $table = 'tb_pasien';
+
+    protected $primaryKey = 'id_pasien';
+
+    protected $fillable = [
+        'nama_pasien',
+        'tanggal_lahir',
+        'alamat',
+        'pekerjaan',
+        'no_whatsapp'
+    ];
 }

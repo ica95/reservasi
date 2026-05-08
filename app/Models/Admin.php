@@ -9,8 +9,11 @@ class admin extends Model
 {
     use HasFactory;
 
-    protected $fillabel = [
-        'id_admin',
+    protected $table = 'tb_admin';
+
+    protected $primaryKey = 'id_admin';
+
+    protected $fillable = [
         'username',
         'password'
     ];
