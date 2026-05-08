@@ -18,6 +18,8 @@ class pasien extends Model
         'tanggal_lahir',
         'alamat',
         'pekerjaan',
-        'no_whatsapp'
+        'no_whatsapp',
+        'email',
+        'password'
     ];
 }

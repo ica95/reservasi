@@ -7,6 +7,7 @@
 </head>
 <body>
      <h1>Data Pasien</h1>
+     <a href="/pasien/create">Tambah Data</a>
      <table border="1" cellpadding="10">
     <tr>
         <th>ID</th>
@@ -15,9 +16,11 @@
         <th>Alamat</th>
         <th>Pekerjaan</th>
         <th>No WhatsApp</th>
+        <th>Aksi</th>
     </tr>
 
     @foreach($pasien as $p)
+    
     <tr>
         <td>{{ $p->id_pasien }}</td>
         <td>{{ $p->nama_pasien }}</td>
@@ -25,8 +28,17 @@
         <td>{{ $p->alamat }}</td>
         <td>{{ $p->pekerjaan }}</td>
         <td>{{ $p->no_whatsapp }}</td>
+
+        <td>
+    <a href="/pasien/edit/{{ $p->id_pasien }}">Edit</a>
+    <a href="/pasien/delete/{{ $p->id_pasien }}"
+onclick="return confirm('Yakin ingin menghapus data?')">
+Hapus
+</a>
+        </td>
     </tr>
     @endforeach
+
 
 </table>
 </body>
